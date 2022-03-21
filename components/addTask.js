@@ -1,5 +1,6 @@
 import checkComplete from './checkComplete.js';
 import deleteIcon from './deleteIcon.js';
+import { displayTask } from './readTask.js';
 
 export const addTask = (evento) => {
     evento.preventDefault();
@@ -12,6 +13,10 @@ export const addTask = (evento) => {
     const date = calendar.value;
     const dateFormat = moment(date).format('DD/MM/YYYY');
 
+    if (value == "" || date == "") {
+        return;
+    }
+
 
     input.value = '';
     calendar.value = '';
@@ -21,6 +26,8 @@ export const addTask = (evento) => {
         dateFormat
     }
 
+    list.innerHTML = '';
+
     // utilizamos pipe || 
     // para crear una nueva evaluación de cortocircuito
     // (short circuit evaluation)
@@ -28,8 +35,7 @@ export const addTask = (evento) => {
     taskList.push(taskObj);
     localStorage.setItem('task', JSON.stringify(taskList));
 
-    const task = createTask(taskObj);
-    list.appendChild(task);
+    displayTask();
 }
 
 
@@ -47,7 +53,7 @@ export const createTask = ({ value, dateFormat }) => {
 
     const dateElement = document.createElement('span');
     dateElement.innerHTML = dateFormat;
-    
+
     task.appendChild(taskContent);
     task.appendChild(dateElement);
     task.appendChild(deleteIcon());

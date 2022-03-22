@@ -1,4 +1,4 @@
-import { displayTasks } from './readTasks.js';
+import { displayTask } from "./readTask.js";
 
 const deleteIcon = (id) => {
   const i = document.createElement('i');
@@ -8,14 +8,13 @@ const deleteIcon = (id) => {
 };
 
 const deleteTask = (id) => {
-  const li = document.querySelector('[data-list]');
+  const li = document.querySelector('[data-list]')
   const tasks = JSON.parse(localStorage.getItem('tasks'));
-  const index = tasks.findIndex((item) => item.id === id);
-  console.log(index);
+  const index = tasks.findIndex((item) => item.id == id);
   tasks.splice(index, 1);
   li.innerHTML = '';
   localStorage.setItem('tasks', JSON.stringify(tasks));
-  displayTasks();
+  displayTask();
 };
 
 export default deleteIcon;

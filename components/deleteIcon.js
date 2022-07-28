@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { displayTasks } from './readTasks.js';
 
+=======
+import { displayTasks } from "./readTask.js";
+>>>>>>> projectoInicial
 const deleteIcon = (id) => {
   const i = document.createElement('i');
   i.classList.add('fas', 'fa-trash-alt', 'trashIcon', 'icon');
@@ -8,6 +12,7 @@ const deleteIcon = (id) => {
 };
 
 const deleteTask = (id) => {
+<<<<<<< HEAD
   const li = document.querySelector('[data-list]');
   const tasks = JSON.parse(localStorage.getItem('tasks'));
   const index = tasks.findIndex((item) => item.id === id);
@@ -17,5 +22,16 @@ const deleteTask = (id) => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
   displayTasks();
 };
+=======
+  const li = document.querySelector("[data-list]");
+ const tasks = JSON.parse(localStorage.getItem("tasks"));
+ const index = tasks.findIndex((item) => item.id == id);
+  tasks.splice(index, 1);
+  li.innerHTML = "";
+ console.log(tasks);
+ localStorage.setItem("tasks", JSON.stringify(tasks));
+displayTasks()
+}
+>>>>>>> projectoInicial
 
 export default deleteIcon;

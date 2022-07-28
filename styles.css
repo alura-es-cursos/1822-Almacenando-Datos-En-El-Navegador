@@ -46,7 +46,11 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
+<<<<<<< HEAD
   width: 35%;
+=======
+  width: 45%;
+>>>>>>> projectoInicial
 }
 
 .inputForm::placeholder {
@@ -126,7 +130,14 @@ form {
   font-size: 48px;
 }
 
+<<<<<<< HEAD
 .date {
   width: 100%;
   padding: 15px;
 }
+=======
+.date{
+  width: 100%;
+  padding: 15px;
+}
+>>>>>>> projectoInicial

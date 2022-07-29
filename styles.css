@@ -46,7 +46,8 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 65%;
+  width: 45%;
+
 }
 
 .inputForm::placeholder {
@@ -124,4 +125,16 @@ form {
 
 .noTasks {
   font-size: 48px;
+}
+
+
+.date{
+  width: 100%;
+  padding: 15px;
+}
+
+@media screen and  (max-width: 600px) {
+  .mainCard{
+    width: 80vw;
+  }
 }

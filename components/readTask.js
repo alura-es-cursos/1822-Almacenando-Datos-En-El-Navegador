@@ -1,11 +1,11 @@
 import { createTask } from "./addTask.js";
-import { uniqueDate } from "../services/date.js";
+import { uniqueDate, orderDates } from "../services/date.js";
 import dateElemento from "./dateElement.js";
 export const readTask = () => {
     const list = document.querySelector('[data-list]')
     const taskList = JSON.parse(localStorage.getItem('task')) || [];
     const dates = uniqueDate(taskList);
-
+    orderDates(dates);
     dates.forEach(date => {
         const dateMoment = moment(date, 'DD/MM/YYYY');
         list.appendChild(dateElemento(date));

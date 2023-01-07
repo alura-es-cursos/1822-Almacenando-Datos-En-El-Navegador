@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -31,15 +34,24 @@
               autocomplete="off"
               data-form-input
             />
+            <input type="date" data-form-date placeholder="DIA/MES/AÑO" />
             <button type="submit" class="btnCreate" data-form-btn>
               Agregar <i class="fas fa-plus-circle"></i>
             </button>
           </form>
         </div>
-        <ul class="cardsList" data-list>
-        </ul>
+        <ul class="cardsList" data-list></ul>
       </div>
     </main>
+    <!-- moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!-- ID unicos -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="script.js"></script>
   </body>
 </html>

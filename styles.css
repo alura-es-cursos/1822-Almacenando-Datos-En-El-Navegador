@@ -6,11 +6,9 @@
 }
 
 main {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
-  );
+  background-image: linear-gradient(109.6deg,
+      rgba(62, 161, 219, 1) 11.2%,
+      rgba(93, 52, 236, 1) 100.2%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -24,6 +22,11 @@ form {
   align-items: center;
   display: flex;
   margin-bottom: 15px;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 .mainCard {
@@ -46,7 +49,7 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 65%;
+  width: 35%;
 }
 
 .inputForm::placeholder {
@@ -55,11 +58,9 @@ form {
 
 .btnCreate {
   padding: 10px 15px;
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
-  );
+  background-image: linear-gradient(109.6deg,
+      rgba(62, 161, 219, 1) 11.2%,
+      rgba(93, 52, 236, 1) 100.2%);
   border: none;
   color: #fff;
   border-radius: 5px;
@@ -117,6 +118,7 @@ form {
   top: -100px;
   left: 0;
 }
+
 .deleteSpace {
   position: relative;
   width: 30%;
@@ -124,4 +126,9 @@ form {
 
 .noTasks {
   font-size: 48px;
+}
+
+.date {
+  width: 100%;
+  padding: 15px;
 }

@@ -1,6 +1,7 @@
 import { createTask } from "./addTask.js";
 import { uniqueDate, orderDates } from "../services/date.js";
 import dateElemento from "./dateElement.js";
+
 export const readTask = () => {
     const list = document.querySelector('[data-list]')
     const taskList = JSON.parse(localStorage.getItem('task')) || [];

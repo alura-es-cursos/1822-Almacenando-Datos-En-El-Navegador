@@ -6,6 +6,7 @@ export const readTask = () => {
     const list = document.querySelector('[data-list]')
     const taskList = JSON.parse(localStorage.getItem('task')) || [];
     const dates = uniqueDate(taskList);
+
     orderDates(dates);
     dates.forEach(date => {
         const dateMoment = moment(date, 'DD/MM/YYYY');
